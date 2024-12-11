@@ -44,6 +44,7 @@ const addfirm=async (req,res)=>{
    }
 };
 
+
 const getfirmbyid=async(req,res)=>{
    try{
       const findid=req.params.id;

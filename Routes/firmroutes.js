@@ -4,7 +4,7 @@ const verifytoken=require("../middleware/verifytoken");
 const router=express.Router();
 
 router.post('/addfirm',verifytoken,firmcontroller.addfirm);
-router.get("/id",firmcontroller.getfirmbyid);
+router.get("/:id",firmcontroller.getfirmbyid);
 
 // getting images with common format;
 router.get("/upload/:imageName",(req,res)=>{

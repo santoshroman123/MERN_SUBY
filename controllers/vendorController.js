@@ -52,7 +52,7 @@ const vendorLogin=async (req,res)=>{
 const getAllvendor=async (req,res)=>{
     try{
         const venders=await vendermodel.find().populate("firm")
-        res.status(200).json({venders})
+        res.status(200).json(venders)
     }
     catch(err){
         console.log(err);

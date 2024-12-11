@@ -51,12 +51,12 @@ const vendorLogin=async (req,res)=>{
 
 const getAllvendor=async (req,res)=>{
     try{
-        const venders=await vendermodel.find().populate({path:"Firm", strictPopulate:false})
+        const venders=await vendermodel.find().populate("firm")
         res.status(200).json({venders})
     }
     catch(err){
         console.log(err);
-        res.status(500).json({Error:"Invaild "})
+        res.status(500).json({Error:"Invaild information"})
     }
 };
 

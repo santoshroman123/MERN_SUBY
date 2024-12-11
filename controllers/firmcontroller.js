@@ -2,6 +2,7 @@ const verifytoken=require("../middleware/verifytoken");
 const Firm=require("../models/firm");
 const Vendor=require("../models/vendor");
 const multer=require("multer");
+const productmodel=require("../models/product")
 
 // multer image uploader
 const storage=multer.diskStorage({
@@ -74,7 +75,7 @@ const deletefirm=async(req,res)=>{
 
    }catch(err){
       console.log(err);
-      return res.status(500).json({Error:"invaild Details"});
+      return res.status(500).json({Error:"invaild Id"});
    }
 }
 

@@ -51,9 +51,8 @@ const vendorLogin=async (req,res)=>{
 
 const getAllvendor=async (req,res)=>{
     try{
-        // const venders=await vendermodel.find().populate("firm")
-        // res.status(200).json(venders)
-        res.json({Message:"Thanks for this guys love u",Error:"This happens when Your are not connected With others"})
+        const venders=await vendermodel.find().populate("firm")
+        return res.status(200).json(venders)
     }
     catch(err){
         console.log(err);

@@ -25,8 +25,9 @@ app.use('/firm',firmroutes);
 app.use("/product",productrouter);
 app.use('/uploads',express.static("uploads"));
 app.use('/',(req,res)=>{
-    res.send("<h1>Welcome to Suby from Mern Stack</h1>")
-})
+    res.send("<h1>Welcome to Suby from Mern Stack")
+});
 
 app.listen(port,()=>{console.log("server Conntected",port)}); 
+
 
